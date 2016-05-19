@@ -24,7 +24,7 @@ def server(interface, port):
         print('  Socket name:', sc.getsockname())
         print('  Socket peer:', sc.getpeername())
         message = sc.recv(1024)
-        print('  Dolazna poruka je:', repr(message))
+        print('  Dolazna poruka je:', repr(message), "i njena duzina je: " , len(message) )
         sc.sendall(b'Dovidjenja klijent! ')
         sc.close()
         print('  Odgovor je poslat i soket je zatvoren')
